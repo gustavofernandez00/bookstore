@@ -1,5 +1,7 @@
 package com.gustavo.bookstore.data.models
 
+import com.google.gson.annotations.SerializedName
+
 data class ResultsResponse(
     @SerializedName("results") val results: BooksResponse
 )
