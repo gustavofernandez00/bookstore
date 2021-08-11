@@ -5,9 +5,10 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.gustavo.bookstore.R
 import com.gustavo.bookstore.data.models.Response
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(R.layout.home_fragment) {
 
     lateinit var viewmodelProvider: ViewModelProvider.Factory
 
@@ -27,5 +28,9 @@ class HomeFragment : Fragment() {
                 is Response.Error -> {} //showErrorView
             }
         }
+    }
+
+    companion object {
+        fun newInstance() : HomeFragment = HomeFragment()
     }
 }
